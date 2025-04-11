@@ -1,0 +1,587 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.ustNavigasyon {
+  background-color: #1a2a44;
+  color: white;
+  padding: 20px 50px;
+}
+
+.ustKisim {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.magazaLogosu {
+  font-size: 24px;
+  font-weight: 900;
+  color: white;
+}
+
+.sinirliTeklif {
+  font-size: 20px;
+  border-bottom: 2px solid green;
+  cursor: pointer;
+}
+
+.altKisim {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menuOgesi {
+  margin-right: 50px;
+  cursor: pointer;
+  color: lightgray;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.menuOgesi:hover {
+  color: #00f7ff; /* Sarı yerine neon turkuaz */
+}
+
+.slayt {
+  background: linear-gradient(180deg, #000000 0%, #1a1a1a 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+  overflow: hidden;
+}
+
+.slaytSarici {
+  display: flex;
+  width: 500vw;
+  transition: all 1.5s ease-in-out;
+}
+
+.slaytOgesi {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.slaytArkaPlan {
+  width: 750px;
+  height: 750px;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0 10px 20px rgba(255, 107, 107, 0.7),
+    0 0 50px rgba(75, 0, 130, 0.5);
+  animation: titresim 3s infinite ease-in-out;
+}
+
+@keyframes titresim {
+  0% {
+    box-shadow: 0 10px 20px rgba(255, 107, 107, 0.7),
+      0 0 50px rgba(75, 0, 130, 0.5);
+  }
+  50% {
+    box-shadow: 0 15px 30px rgba(0, 183, 235, 0.7),
+      0 0 70px rgba(255, 202, 40, 0.5);
+  }
+  100% {
+    box-shadow: 0 10px 20px rgba(255, 107, 107, 0.7),
+      0 0 50px rgba(75, 0, 130, 0.5);
+  }
+}
+
+.slaytResmi {
+  z-index: 1;
+}
+
+.slaytBasligi {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  font-size: 60px;
+  font-weight: 900;
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+
+.slaytFiyati {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  font-size: 60px;
+  font-weight: 300;
+  text-align: center;
+  color: white;
+  border: 2px solid transparent;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.3)
+  );
+  padding: 10px 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.slaytFiyati:hover {
+  transform: scale(1.05);
+}
+
+.satinAlButonu {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  font-size: 30px;
+  font-weight: 900;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  background-color: black;
+  z-index: 1;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: all 0.5s ease;
+}
+
+.satinAlButonu:hover {
+  background-color: white;
+  color: black;
+}
+
+.slaytOgesi:nth-child(1) .slaytArkaPlan {
+  background-color: #ff004d;
+}
+.slaytOgesi:nth-child(2) .slaytArkaPlan {
+  background-color: #8a00ff;
+}
+.slaytOgesi:nth-child(3) .slaytArkaPlan {
+  background-color: #00ffcc;
+}
+.slaytOgesi:nth-child(4) .slaytArkaPlan {
+  background-color: #ffea00;
+}
+.slaytOgesi:nth-child(5) .slaytArkaPlan {
+  background-color: #ff4d00;
+}
+
+.slaytOgesi:nth-child(1) .slaytFiyati {
+  color: #ff6b6b;
+}
+.slaytOgesi:nth-child(2) .slaytFiyati {
+  color: white;
+}
+.slaytOgesi:nth-child(3) .slaytFiyati {
+  color: #00b7eb;
+}
+.slaytOgesi:nth-child(4) .slaytFiyati {
+  color: #ffca28;
+}
+.slaytOgesi:nth-child(5) .slaytFiyati {
+  color: white;
+}
+
+.ozellikler {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.ozellik {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.ozellikSimgesi {
+  width: 50px;
+  height: 50px;
+}
+
+.ozellikBasligi {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 20px;
+}
+
+.ozellikAciklamasi {
+  color: gray;
+  width: 50%;
+  height: 100px;
+}
+
+.urun {
+  height: 100vh;
+  background-color: whitesmoke;
+  position: relative;
+  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+}
+
+.odeme {
+  width: 500px;
+  height: 500px;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 10px 50px;
+  display: none;
+  flex-direction: column;
+  -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+}
+
+.odemeBasligi {
+  font-size: 20px;
+  color: lightgray;
+}
+
+.etiket {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.odemeGirdisi {
+  padding: 10px;
+  margin: 10px 0px;
+  border: none;
+  border-bottom: 1px solid gray;
+}
+
+.odemeGirdisi::placeholder {
+  color: rgb(163, 163, 163);
+}
+
+.kartSimgeleri {
+  display: flex;
+}
+
+.kartSimgesi {
+  margin-right: 10px;
+}
+
+.kartBilgisi {
+  display: flex;
+  justify-content: space-between;
+}
+
+.kucuk {
+  width: 30%;
+}
+
+.odemeButonu {
+  position: absolute;
+  height: 40px;
+  bottom: -40px;
+  width: 100%;
+  left: 0;
+  -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+  background-color: #369e62;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.kapat {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background-color: gray;
+  color: white;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 2px;
+}
+
+.urunResmi {
+  width: 50%;
+}
+
+.urunDetaylari {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  width: 40%;
+  padding: 50px;
+}
+
+.urunBasligi {
+  font-size: 75px;
+  font-weight: 900;
+}
+
+.urunAciklamasi {
+  font-size: 24px;
+  color: gray;
+}
+
+.renkler,
+.bedenler {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.renk {
+  width: 32px;
+  height: 32px;
+  border-radius: 5px;
+  background-color: black;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.renk:last-child {
+  background-color: darkblue;
+}
+
+.beden {
+  padding: 5px 20px;
+  border: 1px solid black;
+  margin-right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.urunButonu {
+  float: right;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.urunButonu:hover {
+  background-color: white;
+  color: black;
+}
+
+.galeri {
+  padding: 50px;
+  display: flex;
+}
+
+.galeriOgesi {
+  flex: 1;
+  padding: 50px;
+}
+
+.galeriResmi {
+  width: 100%;
+}
+
+.yeniSezon {
+  display: flex;
+}
+
+.yeniSezonOgesi {
+  flex: 1;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.yeniSezonResmi {
+  width: 100%;
+  height: 500px;
+}
+
+.yeniSezonBasligi {
+  font-size: 40px;
+}
+
+.yeniSezonButonu {
+  padding: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.altbilgi {
+  display: flex;
+}
+
+.altbilgiSol {
+  flex: 2;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.altbilgiMenuBasligi {
+  font-size: 16px;
+}
+
+.altbilgiListesi {
+  padding: 0;
+  list-style: none;
+}
+
+.altbilgiListeOgesi {
+  margin-bottom: 10px;
+  color: gray;
+  cursor: pointer;
+}
+
+.altbilgiSag {
+  flex: 1;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.altbilgiGirdisi {
+  padding: 5px;
+}
+
+.altbilgiButonu {
+  padding: 5px;
+  background-color: black;
+  color: white;
+}
+
+.altbilgiSimgeleri {
+  display: flex;
+}
+
+.altbilgiSimgesi {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.telifHakki {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 480px) {
+  .ustNavigasyon {
+    padding: 20px;
+  }
+
+  .altKisim {
+    flex-wrap: wrap;
+  }
+
+  .menuOgesi {
+    margin: 20px;
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  .slayt {
+    clip-path: none;
+  }
+
+  .slaytResmi {
+    width: 90%;
+  }
+
+  .slaytArkaPlan {
+    width: 100%;
+    height: 100%;
+  }
+
+  .slaytBasligi {
+    display: none;
+  }
+
+  .slaytFiyati {
+    top: unset;
+    bottom: -50px;
+    left: 0;
+    background-color: lightgrey;
+  }
+
+  .satinAlButonu {
+    right: 0;
+    top: 0;
+  }
+
+  .ozellikler {
+    flex-direction: column;
+  }
+
+  .urun {
+    clip-path: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .urunResmi {
+    width: 80%;
+  }
+
+  .urunDetaylari {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    top: 0;
+  }
+
+  .urunBasligi {
+    font-size: 50px;
+    margin: 0;
+  }
+
+  .galeri {
+    display: none;
+  }
+
+  .yeniSezon {
+    flex-direction: column;
+  }
+
+  .yeniSezonOgesi:nth-child(2) {
+    padding: 50px;
+  }
+
+  .altbilgi {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .altbilgiSol {
+    padding: 20px;
+    width: 90%;
+  }
+
+  .altbilgiSag {
+    padding: 20px;
+    width: 90%;
+    align-items: center;
+    background-color: whitesmoke;
+  }
+
+  .odeme {
+    width: 90%;
+    padding: 20px;
+  }
+}
